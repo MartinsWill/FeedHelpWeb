@@ -1,3 +1,7 @@
+if(localStorage.getItem("idLogin")===null){
+    location.replace("./index.html")
+}
+
 function logout(){
     localStorage.removeItem('idLogin')
     localStorage.removeItem('nomeLogin')

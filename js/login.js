@@ -1,6 +1,10 @@
 var cpfValor = document.getElementById('cpf').value
 var emailValor = document.getElementById('email').value
 
+if(localStorage.getItem("idLogin")!=null){
+    location.replace("./painelUsuario.html")
+}
+
 const validaLogin = () => {
     //Codico que comparação que valida se uma string contem somente números
     const numbers = /^[0-9]+$/;
