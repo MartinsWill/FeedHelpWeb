@@ -3,7 +3,7 @@ var idLogin = localStorage.getItem('idLogin')
 var nomeLogin = localStorage.getItem('nomeLogin')
 var emailLogin = localStorage.getItem('emailLogin')
 var cpfLogin = localStorage.getItem('cpfLogin')
-var pontuacaoLogin = localStorage.getItem('pontuacaoLogin')
+var pontoLogin = localStorage.getItem('pontuacaoLogin')
 var pontuacao = 0;
 
 async function getQuestionarios() {
@@ -78,7 +78,7 @@ async function postUsuarioQuestionario() {
 }
 
 async function putUsuario() {
-    const pontuacaoFinal = parseInt(pontuacao + pontuacaoLogin)
+    const pontuacaoFinal = parseInt(pontuacao + pontoLogin)
     console.log(idLogin)
     console.log(nomeLogin)
     console.log(cpfLogin)
@@ -91,16 +91,17 @@ async function putUsuario() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            id: parseInt(idLogin),
             nome: nomeLogin,
             cpf: cpfLogin,
             email: emailLogin,
             pontuacao: pontuacaoFinal,
+            usuariosQuestionarios: null,
+            usuariosPromocoes: null,
         })
     };
-    const response = await fetch('https://localhost:44378/api/usuarios', options);
+    const response = await fetch(`https://localhost:44378/api/usuarios/${idLogin}`, options);
     const data = await response.json();
-    //console.log(data.id)
+    console.log(data.id)
 }
 
 function responder() {
