@@ -1,10 +1,8 @@
 .header-blue {
-    background: linear-gradient(135deg, #8b05be, #8b05be);
-    background-color: #184e8e;
+    background: linear-gradient(135deg, #515091, #b34ea2);
     padding-bottom: 80px;
     font-family: Graphik-Regular, Graphik-Medium "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif !important
 }
-
 @media (min-width:768px) {
     .header-blue {
         padding-bottom: 120px
@@ -120,13 +118,13 @@
     font-size: 18px;
     background-color: white;
     font-weight: bolder;
-    border: 2px solid #8a05bea2;
+    border: 2px solid white;
     border-radius: 80px;
     color: #8a05bea2;
     box-shadow: none;
     text-shadow: none;
     padding: 0.8% 3.5% 0.8% 3.5%;
-    background: #8b05be;
+    background: #744f97;
     transition: background-color 0.20s;
     outline: none;
     color: white;

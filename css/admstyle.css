@@ -1,0 +1,129 @@
+.cadas-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #8b05be;
+  outline: none;
+  background: transparent;
+}
+
+.cadas-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgb(21, 15, 15);
+  pointer-events: none;
+  transition: .5s;
+}
+
+.cadas-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgb(252, 252, 252);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+  border-radius: 10px;
+}
+
+.style-texto {
+  color: #8b05be;
+  font-weight: bold;
+}
+
+.acao-btn {
+  font-family: Hack, monospace;
+  background: #ffffff;
+  color: #8b05be;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 1.5rem;
+  border: 2%;
+  transition: all 0.8s;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  min-width: 250px;
+  border-color: #8b05be;
+}
+
+.acao-btn:hover {
+  background: #8b05be;
+  transition: all 0.5s;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px hsl(0, 14%, 99%);
+  color: #ffffff;
+}
+
+.espaco-adm {
+  margin-bottom: 1.5%;
+}
+
+.cor-style {
+  color: #8b05be;
+  font-weight: bold;
+}
+
+.cadas-box2 .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #8b05be;
+  outline: none;
+  background: transparent;
+}
+
+.cadas-box2 .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgb(21, 15, 15);
+  pointer-events: none;
+  transition: .5s;
+}
+
+.cadas-box2 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  width: 70%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgb(252, 252, 252);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+  border-radius: 10px;
+  margin-bottom: 2%;
+}
+
+.acao-btn:disabled {
+  font-family: Hack, monospace;
+  background: #ffffff;
+  color: #8b05be;
+  opacity: 45%;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 1.5rem;
+  border: 2%;
+  transition: all 0.8s;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  min-width: 250px;
+  border-color: #8b05be;
+}
