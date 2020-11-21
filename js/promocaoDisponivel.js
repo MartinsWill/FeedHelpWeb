@@ -5,7 +5,6 @@ var cpfLogin = localStorage.getItem('cpfLogin')
 var pontoLogin = localStorage.getItem('pontuacaoLogin')
 
 var promocoesResgatadas = []
-var pontoPromocao=0
 
 getUsuarioPromocaos()
     .catch(error => {
@@ -54,14 +53,14 @@ async function getPromocoes() {
 function promocaoSelecionado(id, custo) {
     if (parseInt(pontoLogin) >= parseInt(custo)) {
         if (confirm(`Deseja resgatar a promoção\nO seu saldo final será de ${parseInt(pontoLogin) - parseInt(custo)}`)) {
-            pontoPromocao=custo
+            /*
             postUsuarioPromocao(id)
                 .catch(error => {
                     console.log('Houve um erro na execução do postUsuarioPromocao')
                     console.error(error)
                 })
-
-            putUsuario()
+*/
+            putUsuario(parseInt(pontoLogin) - parseInt(custo))
                 .catch(error => {
                     console.log('Houve um erro na execução do putUsuario')
                     console.error(error)
@@ -91,25 +90,28 @@ async function postUsuarioPromocao(idPromocao) {
     console.log(data)
 }
 
-async function putUsuario() {
-    const pontuacaoFinal = parseInt(pontoLogin - pontoPromocao)
+async function putUsuario(pontoFinal) {
+    console.log(nomeLogin)
+    console.log(idLogin)
+    console.log(cpfLogin)
+    console.log(emailLogin)
+    console.log(pontoFinal)
     const options = {
         method: 'PUT',
         mode: "cors",
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         },
         body: JSON.stringify({
-            id: parseInt(idLogin),
             nome: nomeLogin,
             cpf: cpfLogin,
             email: emailLogin,
-            pontuacao: pontuacaoFinal,
-            usuariosQuestionarios: null,
-            usuariosPromocoes: null,
+            pontuacao: pontoFinal
         })
     };
-    const response = await fetch(`https://localhost:44378/api/usuarios`, options);
+    const response = await fetch(`https://localhost:44378/api/usuarios/${idLogin}`, options);
     const data = await response.json();
     console.log(data.id)
+    document.getElementById("btn-concluido").disabled=false
 }

@@ -35,8 +35,9 @@ const verificaCadastroPergunta = () => {
                 console.error(error)
             })
 
-        document.getElementById("Btncadastrar").style.display = "none"
-        document.getElementById("posCadastro").style.display = "inline"
+        document.getElementById("btn-concluido").disabled=false
+        document.getElementById("btn-mais").disabled=false
+        document.getElementById("btn-cadastrar").disabled=true
         //location.replace("./cadastroPergunta.html")
     }
 }
