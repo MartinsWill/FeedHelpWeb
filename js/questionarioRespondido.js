@@ -31,13 +31,17 @@ async function getUsuarioQuestionarios() {
 async function getQuestionarios() {
     const response = await fetch('https://localhost:44378/api/questionarios');
     const data = await response.json();
+    var flag=0
 
     //console.log(data)
     data.forEach(element => {
         const { id, titulo, pontuacao_total } = element;
         if (questionarioRespondidos.find(el => el == id)) {
             document.getElementById("questionariosRespondidos").innerHTML+=`<hr></hr><div class='qRespondidos'><h4>${titulo}</h4>Pontuação disponivel: ${pontuacao_total}</div><hr></hr>`
+            flag++
         }
-    });
 
+    });
+    if(flag==0) document.getElementById("questionariosRespondidos").innerHTML+=`<hr></hr><div class='qRespondidos'><h4>Ainda nenhum questionário foi respondido</h4>Tente novamente mais tarde</div><hr></hr>`
+    
 }
