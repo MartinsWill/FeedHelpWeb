@@ -77,10 +77,10 @@ async function getQuestionarios() {
         const { id, titulo, pontuacao_total } = element;
 
         if (questionarioRespondidos.find(el => el == id)) {
-            document.getElementById("questionariosRespondidos").innerHTML += `<div class='qDisponivel'><h4>${titulo}</h4>Pontuação disponpivel: ${pontuacao_total}</div><br/>`
+            document.getElementById("questionariosRespondidos").innerHTML += `<div class='qDisponivel'><h4>${titulo}</h4>Pontuação disponivel: ${pontuacao_total}</div><br/>`
         }
         else {
-            document.getElementById("questionariosDisponiveis").innerHTML += `<div class='qDisponivel' onclick='questionarioSelecionado(${id})'><h4>${titulo}</h4>Pontuação disponpivel: ${pontuacao_total}</div><br/>`
+            document.getElementById("questionariosDisponiveis").innerHTML += `<div class='qDisponivel' onclick='questionarioSelecionado(${id})'><h4>${titulo}</h4>Pontuação disponivel: ${pontuacao_total}</div><br/>`
         }
     });
 
