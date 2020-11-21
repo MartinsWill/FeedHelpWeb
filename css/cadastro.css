@@ -1,0 +1,61 @@
+/*CSS BUTÃO */
+
+.login-btn {
+    font-family: Hack, monospace;
+    background: #ffffff;
+    color: #8b05be;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 1.5rem;
+    border: 2%;
+    transition: all 0.8s;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    min-width: 250px;
+    border-color: #8b05be;
+}
+
+.login-btn:after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    position: absolute;
+    left: 80%;
+    top: 54%;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+}
+
+.login-btn:hover {
+    background: #8b05be;
+    transition: all 0.5s;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px hsl(0, 14%, 99%);
+    color: #ffffff;
+    background-repeat: no-repeat;
+}
+
+.Login-btn:after {
+    opacity: 1;
+    transition: all 0.5s;
+    color: #ffffff;
+}
+
+.cliqueaqui {
+    font-size: 18px;
+    margin-top: 6%;
+    text-align: center;
+}
+
+a:link {
+    color: #8b05be;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8b05be;
+    font-weight: bold;
+}

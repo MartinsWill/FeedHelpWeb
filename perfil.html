@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedHelp</title>
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+    <button onclick="location.href='login.html'" class="logout"> <i class="fas fa-sign-out-alt"></i> Logout </button>
+
+    <div class="large">
+        <div class="page-content page-container " id="page-content">
+            <div class="padding">
+                <div class="row container d-flex justify-content-center">
+                    <div class="col-xl-6 col-md-12">
+                        <div class="card user-card-full">
+                            <div class="row m-l-0 m-r-0">
+                                <div class="col-sm-4 bg-c-lite-green user-profile">
+                                    <div class="card-block text-center text-white">
+                                        <div class="m-b-25 "> <img src="img/user1.png" class=" imagem-style" alt="">
+                                        </div>
+                                        <h6 class="f-w-600"><span id="nomeUsuario"></span></h6>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 ">
+                                    <div class="card-block">
+                                        <h6 class="m-b-20 p-b-5 b-b-default f-w-600 ">Informações</h6>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <p class="m-b-10 f-w-600">CPF</p>
+                                                <h6 class="text-muted f-w-400"> <span
+                                                        id="cpfUsuario"></span>
+                                                </h6>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <p class="m-b-10 f-w-600">E-mail</p>
+                                                <h6 class="text-muted f-w-400"> <span
+                                                        id="emailUsuario"></span></h6>
+                                            </div>
+                                        </div>
+                                        <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <p class="m-b-10 f-w-600">Pontuação disponivel:</p>
+                                                <h6 class="text-muted f-w-400"><span id="pontuacaoUsuario"></span>
+                                                    Pontos
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="location.href='painelUsuario.html'" class="btn-voltar "> <i
+                                class="fas fa-chevron-left"></i>Voltar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/painelUsuario.js"></script>
+
+</html>

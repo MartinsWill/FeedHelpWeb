@@ -1,0 +1,79 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(#8b05be, #8b05be);
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgb(252, 252, 252);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+  border-radius: 10px;
+}
+
+/*CSS BUTÃO */
+
+.acao-btn {
+  font-family: Hack, monospace;
+  background: #ffffff;
+  color: #8b05be;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 1.5rem;
+  border: 2%;
+  transition: all 0.8s;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  min-width: 250px;
+  border-color: #8b05be;
+}
+
+.acao-btn:after {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  position: absolute;
+  left: 80%;
+  top: 54%;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+
+.acao-btn:hover {
+  background: #8b05be;
+  transition: all 0.5s;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px hsl(0, 14%, 99%);
+  color: #ffffff;
+}
+
+.acao-btn:after {
+  opacity: 1;
+  transition: all 0.5s;
+  color: #ffffff;
+}
+
+.espaco {
+  margin-bottom: 3%;
+}
+
+.style-text {
+  color: #ffffff;
+  margin-top: 2%;
+}
+

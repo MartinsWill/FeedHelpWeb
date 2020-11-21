@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedHelp</title>
+</head>
+<body>
+    <h1>Cadastro Pergunta</h1>
+    <p>A segunda etapa será cadastrar as pergunta e alternativas</p>
+    <p>Título: <input type="text" id="titulo" name="titulo"></p>
+    <p>Descrição: <input type="text" id="descricao" name="descricao"></p>
+    <br/>
+    <p>Alternativa 1: <input type="text" id="alternativa1" name="alternativa1"></p>
+    <p>Alternativa 2: <input type="text" id="alternativa2" name="alternativa2"></p>
+    <p>Alternativa 3: <input type="text" id="alternativa3" name="alternativa3"></p>
+    <p>Alternativa 4: <input type="text" id="alternativa4" name="alternativa4"></p>
+    
+    <br/>
+    <span id="spanAlert"></span><br/>
+    <button onclick="verificaCadastroPergunta()" id="btncadastrar">Cadastrar</button>
+    <div id="posCadastro" style="display: none;">
+        <button onclick="">Concluido</button>
+        <button onclick="">Cadastrar mais uma pergunta</button>
+    </div>
+    <br/>
+</body>
+
+<script src="js/cadastroPergunta.js"></script>
+</html>
