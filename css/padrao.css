@@ -107,3 +107,6 @@ body {
   animation: btn-anim4 1s linear infinite;
   animation-delay: .75s
 }
+.style-border{
+  font-weight: bolder;
+}

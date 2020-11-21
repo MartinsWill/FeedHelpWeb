@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FeedHelp</title>
-</head>
-<body>
-    <h1>Cadastro Promoção</h1>
-    <p>Nome: <input type="text" id="nome" name="nome"></p>
-    <p>Descrição: <input type="text" id="descricao" name="descricao"></p>
-    <p>Custo: <input type="number" id="custo" name="custo" maxlength="5"></p>
-    <br/>       
-    <span id="spanAlert"></span><br/>
-    <button onclick="verificaCadastro()">Cadastrar</button>
-    <br/>
-    <a href="index.html">Realizar Login</a>
-</body>
+    <link rel="stylesheet" href="../css/admstyle.css">
+    <link rel="stylesheet" href="../css/padrao.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 
+</head>
+
+<body>
+    <div class="cadas-box">
+        <h2 class="text-center style-texto espaco-adm">CADASTRO PROMOÇÃO</h2>
+        <div class="cor-style">
+            <div class="user-box ">
+                NOME<input type="text" id="nome" name="nome" placeholder="Ex: Ticket R$10,00">
+            </div>
+            <div class="user-box">
+                DESCRIÇÃO<input type="text" id="descricao" name="descricao"
+                    placeholder="Ex: Ticket utilizado para compras acima de R$10,00.">
+            </div>
+            <div class="user-box">
+                CUSTO<input type="number" id="custo" name="custo" placeholder="Ex: 500">
+            </div>
+        </div>
+        <div>
+            <span id="spanAlert"></span><br />
+            <button onclick="verificaCadastro()" class="acao-btn espaco-adm"> CADASTRAR <i
+                    class="fas fa-check-circle"></i>
+            </button>
+            <button onclick="location.href='painelADM.html'" class="acao-btn"> <i class="fas fa-chevron-left"></i>
+                VOLTAR
+            </button>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
 <script src="js/cadastroPromocao.js"></script>
+
 </html>
