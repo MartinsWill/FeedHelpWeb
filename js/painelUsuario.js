@@ -28,9 +28,9 @@ async function getUsuarioQuestionarios() {
     });
 
 
-    getQuestionarios()
+getQuestionarios()
         .catch(error => {
-            console.log('Houve um erro na execução do getWeather')
+            console.log('Houve um erro na execução do getQuestionarios')
             console.error(error)
         })
 }
@@ -53,7 +53,7 @@ async function getUsuarioPromocaos() {
         }
     });
 
-    getPromocoes()
+getPromocoes()
         .catch(error => {
             console.log('Houve um erro na execução do getPromocoes')
             console.error(error)
