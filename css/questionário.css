@@ -17,29 +17,11 @@
     border-color: #8b05be;
 }
 
-.acao-btn:after {
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 400;
-    position: absolute;
-    left: 80%;
-    top: 54%;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-}
-
 .acao-btn:hover {
     background: #8b05be;
     transition: all 0.5s;
     border-radius: 10px;
     box-shadow: 0px 6px 15px hsl(0, 14%, 99%);
-    color: #ffffff;
-}
-
-.acao-btn:after {
-    opacity: 1;
-    transition: all 0.5s;
     color: #ffffff;
 }
 
@@ -75,6 +57,7 @@
 
 .style-texto {
     color: #8b05be;
+    font-weight: bold;
 }
 
 .btn-voltar {

@@ -65,7 +65,7 @@ async function getUsuarioPromocaos() {
 function questionarioSelecionado(id) {
     sessionStorage.setItem('idQuestionario', id)
     console.log(id)
-    location.replace("./respondeQuestionario.html")
+    location.replace("../questionario/respondeQuestionario.html")
 }
 
 async function getQuestionarios() {

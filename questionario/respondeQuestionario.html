@@ -13,16 +13,17 @@
 
 <body>
     <div class="resp-box">
-        <h2 class="text-center style-texto">QUESTIONÁRIO RESPONDIDOS</h2>
-        <div id="questionariosRespondidos">
+        <h2 id="tituloQuestionario" class="text-center style-texto"></h2>
+        <p id="potuacaoQuestionario">PONTUAÇÃO: </p>
+        <div id="perguntas">
         </div>
-        <div><button onclick="location.href='questionario.html'" onclick="validaLogin()" class="acao-btn"> <i
-                    class="fas fa-chevron-left"></i> VOLTAR
-            </button>
-        </div>
+        <span id="spanAlert"></span><br />
+        <button id="btnresponder" onclick="responder()" class="acao-btn"> CONCLUIR
+            RESPOSTA <i class="fas fa-check-circle"></i>
+        </button>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="../js/questionarioRespondido.js"></script>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="../js/respondeQuestionario.js"></script>
 
 </html>
