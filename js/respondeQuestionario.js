@@ -1,5 +1,5 @@
 var idQuestionario = sessionStorage.getItem('idQuestionario')
-var idLogin = localStorage.getItem('idLogin')
+var idLogin = parseInt(localStorage.getItem('idLogin'))
 var nomeLogin = localStorage.getItem('nomeLogin')
 var emailLogin = localStorage.getItem('emailLogin')
 var cpfLogin = localStorage.getItem('cpfLogin')
@@ -60,6 +60,28 @@ getPerguntas()
     })
 
 
+function responder() {
+        document.getElementById("spanAlert").textContent = "Cadastrado com sucesso"
+        document.getElementById("spanAlert").style.color = "green"
+    
+        putUsuario(parseInt(pontuacao) + parseInt(pontoLogin))
+            .catch(error => {
+                console.log('Houve um erro na execução do putUsuario')
+                console.error(error)
+            })
+    
+        postUsuarioQuestionario()
+            .catch(error => {
+                console.log('Houve um erro na execução do postUsuarioQuestionario')
+                console.error(error)
+            })
+
+        setTimeout(function () {
+            location.replace("../questionario/questionarioDisponiveis.html")
+        }, 500); 
+    
+    }
+
 async function postUsuarioQuestionario() {
     const options = {
         method: 'POST',
@@ -77,47 +99,25 @@ async function postUsuarioQuestionario() {
     console.log(data)
 }
 
-async function putUsuario() {
-    const pontuacaoFinal = parseInt(pontuacao + pontoLogin)
-    console.log(idLogin)
-    console.log(nomeLogin)
-    console.log(cpfLogin)
-    console.log(emailLogin)
-    console.log(pontuacaoFinal)
+async function putUsuario(pontoFinal) {
+    localStorage.setItem('pontuacaoLogin', pontoFinal)
     const options = {
         method: 'PUT',
         mode: "cors",
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         },
         body: JSON.stringify({
+            id: idLogin,
             nome: nomeLogin,
             cpf: cpfLogin,
             email: emailLogin,
-            pontuacao: pontuacaoFinal,
+            pontuacao: pontoFinal,
             usuariosQuestionarios: null,
             usuariosPromocoes: null,
         })
     };
     const response = await fetch(`https://localhost:44378/api/usuarios/${idLogin}`, options);
-    const data = await response.json();
-    console.log(data.id)
 }
 
-function responder() {
-    document.getElementById("spanAlert").textContent = "Cadastrado com sucesso"
-    document.getElementById("spanAlert").style.color = "green"
-
-    putUsuario()
-        .catch(error => {
-            console.log('Houve um erro na execução do putUsuario')
-            console.error(error)
-        })
-
-    postUsuarioQuestionario()
-        .catch(error => {
-            console.log('Houve um erro na execução do postUsuarioQuestionario')
-            console.error(error)
-        })
-
-}
