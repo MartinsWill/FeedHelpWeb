@@ -75,6 +75,10 @@ function responder() {
                 console.log('Houve um erro na execução do postUsuarioQuestionario')
                 console.error(error)
             })
+
+        setTimeout(function () {
+            location.replace("../questionario/questionarioDisponiveis.html")
+        }, 500); 
     
     }
 
