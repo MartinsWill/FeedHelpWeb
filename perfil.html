@@ -7,6 +7,7 @@
     <title>FeedHelp</title>
     <link rel="stylesheet" href="css/perfil.css">
     <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
     <link rel="stylesheet"
@@ -16,8 +17,27 @@
 </head>
 
 <body>
-    <button onclick="location.href='login.html'" class="logout"> <i class="fas fa-sign-out-alt"></i> Logout </button>
-
+    <div class="header-blue">
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+            <div class="container-fluid"> <a class="navbar-brand"><img class="tamanho-img" src="img/icone-fd.png"></a><a
+                    class="navbar-brand" href="index.html">Início</a><button data-toggle="collapse"
+                    class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
+                        navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contato</a></li>
+                    </ul>
+                    <form class="form-inline mr-auto" target="_self">
+                        <div class="form-group"><label for="search-field"><i
+                                    class="fa fa-search text-white"></i></label><input class="form-control search-field"
+                                type="search" id="search-field" name="search" disabled>
+                        </div>
+                    </form><a onclick="logout()" class="btn btn-light action-button text-light" role="button">Logout <i
+                            class="fas fa-sign-out-alt"></i> </a>
+                </div>
+            </div>
+        </nav>
+    </div>
     <div class="large">
         <div class="page-content page-container " id="page-content">
             <div class="padding">
@@ -73,10 +93,11 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-document.getElementById("nomeUsuario").textContent = localStorage.getItem('nomeLogin')
-document.getElementById("emailUsuario").textContent = localStorage.getItem('emailLogin')
-document.getElementById("cpfUsuario").textContent = localStorage.getItem('cpfLogin')
-document.getElementById("pontuacaoUsuario").textContent = localStorage.getItem('pontuacaoLogin')
+    document.getElementById("nomeUsuario").textContent = localStorage.getItem('nomeLogin')
+    document.getElementById("emailUsuario").textContent = localStorage.getItem('emailLogin')
+    document.getElementById("cpfUsuario").textContent = localStorage.getItem('cpfLogin')
+    document.getElementById("pontuacaoUsuario").textContent = localStorage.getItem('pontuacaoLogin')
 </script>
+<script src="js/logout.js"></script>
 
 </html>

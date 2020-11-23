@@ -3,7 +3,7 @@
 .acao-btn {
     font-family: Hack, monospace;
     background: #ffffff;
-    color: #8b05be;
+    color: #744f97;
     cursor: pointer;
     font-size: 22px;
     font-weight: bold;
@@ -18,11 +18,12 @@
 }
 
 .acao-btn:hover {
-    background: #8b05be;
+    background: #744f97;
     transition: all 0.5s;
     border-radius: 10px;
     box-shadow: 0px 6px 15px hsl(0, 14%, 99%);
     color: #ffffff;
+    border-color:#744f97 ;
 }
 
 .espaco {
@@ -78,7 +79,7 @@
 }
 
 .btn-voltar:hover {
-    background: #8b05be;
+    background: #744f97;
     transition: all 0.5s;
     border-radius: 10px;
     color: #ffffff;

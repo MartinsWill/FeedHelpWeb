@@ -9,5 +9,5 @@ function logout(){
     localStorage.removeItem('cpfLogin')
     localStorage.removeItem('pontuacaoLogin')
 
-    location.replace("./index.html")
+    location.replace("../index.html")
 }

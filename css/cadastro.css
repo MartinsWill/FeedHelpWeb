@@ -30,12 +30,13 @@
 }
 
 .login-btn:hover {
-    background: #8b05be;
+    background: #744f97;
     transition: all 0.5s;
     border-radius: 10px;
     box-shadow: 0px 6px 15px hsl(0, 14%, 99%);
     color: #ffffff;
     background-repeat: no-repeat;
+    border-color: #744f97;
 }
 
 .Login-btn:after {
