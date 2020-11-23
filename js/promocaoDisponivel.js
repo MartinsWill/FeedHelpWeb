@@ -53,19 +53,21 @@ async function getPromocoes() {
 function promocaoSelecionado(id, custo) {
     if (parseInt(pontoLogin) >= parseInt(custo)) {
         if (confirm(`Deseja resgatar a promoção\nO seu saldo final será de ${parseInt(pontoLogin) - parseInt(custo)}`)) {
-            /*
+            
             postUsuarioPromocao(id)
                 .catch(error => {
                     console.log('Houve um erro na execução do postUsuarioPromocao')
                     console.error(error)
                 })
-*/
+
             putUsuario(parseInt(pontoLogin) - parseInt(custo))
                 .catch(error => {
                     console.log('Houve um erro na execução do putUsuario')
                     console.error(error)
                 })
-            //location.replace("../promocao/promocaoDisponivel.html")
+            setTimeout(function () {
+                location.replace("../promocao/promocaoDisponivel.html")
+            }, 500); 
         }
     }
     else {
@@ -91,11 +93,7 @@ async function postUsuarioPromocao(idPromocao) {
 }
 
 async function putUsuario(pontoFinal) {
-    console.log(nomeLogin)
-    console.log(idLogin)
-    console.log(cpfLogin)
-    console.log(emailLogin)
-    console.log(pontoFinal)
+    localStorage.setItem('pontuacaoLogin', pontoFinal)
     const options = {
         method: 'PUT',
         mode: "cors",
@@ -104,14 +102,14 @@ async function putUsuario(pontoFinal) {
             'Accept': 'application/json'
         },
         body: JSON.stringify({
+            id: idLogin,
             nome: nomeLogin,
             cpf: cpfLogin,
             email: emailLogin,
-            pontuacao: pontoFinal
+            pontuacao: pontoFinal,
+            usuariosQuestionarios: null,
+            usuariosPromocoes: null,
         })
     };
     const response = await fetch(`https://localhost:44378/api/usuarios/${idLogin}`, options);
-    const data = await response.json();
-    console.log(data.id)
-    document.getElementById("btn-concluido").disabled=false
 }
