@@ -6,7 +6,7 @@ var alternativa3Valor = document.getElementById('alternativa3').value
 var alternativa4Valor = document.getElementById('alternativa4').value
 var idQuestionario = parseInt(localStorage.getItem('questionarioId'))
 
-const verificaCadastroPergunta = () => {
+const verificaCadastro = () => {
     tituloValor = document.getElementById('titulo').value
     descricaoValor = document.getElementById('descricao').value
     alternativa1Valor = document.getElementById('alternativa1').value

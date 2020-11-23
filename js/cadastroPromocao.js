@@ -30,6 +30,10 @@ const verificaCadastro = () => {
                 console.log('Houve um erro na execução do postPromocao')
                 console.error(error)
             })
+
+        setTimeout(function () {
+            location.replace("painelADM.html")
+        }, 500); 
     }
 }
 

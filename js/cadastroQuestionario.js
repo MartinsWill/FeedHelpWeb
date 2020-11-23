@@ -24,8 +24,11 @@ const verificaCadastro = () => {
                 console.log('Houve um erro na execução do postQuestionario')
                 console.error(error)
             })
-
-        location.replace("./cadastroPergunta.html")
+        
+        setTimeout(function () {
+            location.replace("cadastroPergunta.html")
+        }, 500); 
+        
     }
 }
 
