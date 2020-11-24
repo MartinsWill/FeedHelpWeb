@@ -243,3 +243,12 @@
     width: 40px;
     height: 25px;
 }
+.style-p{
+    color: white;
+    text-align: justify;
+}
+.style-texto{
+    font-weight: bold;
+    font-size: 16px;
+   
+}
