@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 
 </head>
@@ -18,10 +19,13 @@
 <body>
     <div class="header-blue">
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
-            <div class="container-fluid"> <a class="navbar-brand"><img class="tamanho-img" src="img/icone-fd.png"></a><a
-                    class="navbar-brand" href="painelUsuario.html">Início</a><button data-toggle="collapse"
-                    class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
-                        navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container-fluid">
+                <a class="navbar-brand"><img class="tamanho-img" src="img/icone-fd.png"></a>
+                <a class="navbar-brand" href="painelUsuario.html">Início</a>
+                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav">
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contato</a></li>
@@ -37,57 +41,36 @@
             </div>
         </nav>
     </div>
-    <div class="large">
-        <div class="page-content page-container " id="page-content">
-            <div class="padding">
-                <div class="row container d-flex justify-content-center">
-                    <div class="col-xl-6 col-md-12">
-                        <div class="card user-card-full">
-                            <div class="row m-l-0 m-r-0">
-                                <div class="col-sm-4 bg-c-lite-green user-profile">
-                                    <div class="card-block text-center text-white">
-                                        <div class="m-b-25 "> <img src="img/user1.png" class=" imagem-style" alt="">
-                                        </div>
-                                        <h6 class="f-w-600"><span id="nomeUsuario"></span></h6>
-
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 ">
-                                    <div class="card-block">
-                                        <h6 class="m-b-20 p-b-5 b-b-default f-w-600 ">Informações</h6>
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <p class="m-b-10 f-w-600">CPF</p>
-                                                <h6 class="text-muted f-w-400"> <span id="cpfUsuario"></span>
-                                                </h6>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <p class="m-b-10 f-w-600">E-mail</p>
-                                                <h6 class="text-muted f-w-400"> <span id="emailUsuario"></span></h6>
-                                            </div>
-                                        </div>
-                                        <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <p class="m-b-10 f-w-600">Pontuação disponivel:</p>
-                                                <h6 class="text-muted f-w-400"><span id="pontuacaoUsuario"></span>
-                                                    Pontos
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button onclick="location.href='painelUsuario.html'" class="btn-voltar ">
-                            <i class="fas fa-chevron-left">
-                            </i>Voltar</button>
-                    </div>
-                </div>
+    <div class="registration-form">
+        <form>
+            <div class="">
+                <span><img class="img-tam " src="img/user1.png"></span>
             </div>
-        </div>
+            <div class="form-group">
+                <p class="text-left text-style">NOME: <span class="span-style" id="nomeUsuario"></span></p>
+            </div>
+            <div class="form-group">
+                <p class="text-left text-style">CPF: <span class="span-style" id="cpfUsuario"></span></p>
+            </div>
+            <div class="form-group">
+                <p class="text-left text-style">E-MAIL: <span class="span-style" id="emailUsuario"></span></p>
+            </div>
+            <div class="form-group">
+                <p class="text-left text-style">PONTUAÇÃO DISPONÍVEL: <span class="span-style"
+                        id="pontuacaoUsuario"></span></p>
+            </div>
+            <div class="form-group">
+                <button onclick="location.href='painelUsuario.html'" type="button" class="btn btn-block create-account"> <i class="fas fa-chevron-left"></i>
+                    VOLTAR</button>
+            </div>
+        </form>
     </div>
+
+
 </body>
+<span id="cpfUsuario"></span>
+<span id="emailUsuario"></span>
+<span id="pontuacaoUsuario"></span>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
     document.getElementById("nomeUsuario").textContent = localStorage.getItem('nomeLogin')
@@ -96,5 +79,7 @@
     document.getElementById("pontuacaoUsuario").textContent = localStorage.getItem('pontuacaoLogin')
 </script>
 <script src="js/logout.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>
