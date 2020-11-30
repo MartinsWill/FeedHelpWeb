@@ -4,26 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FeedHelp</title>
     <link rel="stylesheet" href="../css/painel.css">
     <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../css/relatorio.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-
-
+    <title>Relatorio</title>
 </head>
 
 <body>
     <div class="header-blue">
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
             <div class="container-fluid"> <a class="navbar-brand"><img class="tamanho-img"
-                        src="../img/icone-fd.png"></a>
-                <a class="navbar-brand" href="painelADM.html">Início</a><button data-toggle="collapse"
-                    class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
+                        src="../img/icone-fd.png"></a><a class="navbar-brand" href="painelADM.html">Início</a><button
+                    data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
                         navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
-
                     <form class="form-inline mr-auto" target="_self">
                         <div class="form-group"><label for="search-field"><i
                                     class="fa fa-search text-white"></i></label><input class="form-control search-field"
@@ -35,18 +32,28 @@
             </div>
         </nav>
     </div>
-    <div class="login-box">
-        <button onclick="location.href='cadastrarPromocao.html'" class="acao-btn espaco ">CADASTRAR PROMOÇÃO <i
-                class="fas fa-tag"></i></button>
-        <button onclick="location.href='cadastrarQuestionario.html'" class="acao-btn espaco">CADASTRAR QUESTIONÁRIO <i
-                class="fas fa-clipboard-check"></i> </button>
-        <button onclick="location.href='relatorio.html'" class="acao-btn ">RELATÓRIO DE RESPOSTAS <i
-                class="fas fa-clipboard-check"></i> </button>
+
+
+    <div class="table-dados-form">
+        <h2 class="title text-center espaco"> LISTA DE RESPOSTAS </h2>
+        <table id="tabelaRelatorio" class="text-center borda-table" border="0">
+            <tr class="td-style strong">
+                <td style="border-top-left-radius: 15px;">Usuário</td>
+                <td>Questionário</td>
+                <td>Pontos</td>
+                <td>Pergunta</td>
+                <td style="border-top-right-radius: 15px;">Alternativa Respondida</td>
+            </tr>
+        </table>
+        <p class="strong text-center espaco" id="spanAlertTable"></p>
+        <a type="button" class="text-center btn-block btn-voltar" style="text-decoration: none;" href="painelADM.html">
+            Voltar
+        </a>
     </div>
 </body>
+<script src="../js/relatorio.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../js/painelUsuario.js"></script>
 <script src="../js/logout.js"></script>
 
 </html>
